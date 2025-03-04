@@ -11,6 +11,10 @@
   "files": [
     "dist"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nicolas-jacquemin/inertiajs-tables-laravel-query-builder"
+  },
   "exports": {
     ".": {
       "import": "./dist/inertiajs-tables-laravel-query-builder.es.js",
