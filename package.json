@@ -1,6 +1,6 @@
 {
   "name": "@nicojqn/inertiajs-tables-laravel-query-builder",
-  "version": "6.0.0",
+  "version": "6.0.1",
   "description": "Inertia.js Front-end Components for Spatie's Laravel Query Builder",
   "private": false,
   "author": "Nicojqn <contact@nicojqn.fr>",
@@ -13,7 +13,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/nicolas-jacquemin/inertiajs-tables-laravel-query-builder"
+    "url": "git+https://github.com/nicolas-jacquemin/inertiajs-tables-laravel-query-builder.git"
   },
   "exports": {
     ".": {
@@ -24,7 +24,7 @@
   "scripts": {
     "dev": "vite build --watch",
     "build": "vite build",
-    "eslint": "./node_modules/.bin/eslint app/resources/js/ js/ --ext .js,.vue --fix"
+    "eslint": "eslint app/resources/js/ js/ --ext .js,.vue --fix"
   },
   "peerDependencies": {
     "@inertiajs/vue3": "^2.0.0",
