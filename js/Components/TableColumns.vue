@@ -7,7 +7,7 @@
     <template #button>
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        class="h-5 w-5 text-gray-400"
+        class="h-5 w-5 text-muted-foreground"
         viewBox="0 0 20 20"
         fill="currentColor"
       >
@@ -28,7 +28,7 @@
       class="min-w-max"
     >
       <div class="px-2">
-        <ul class="divide-y divide-gray-200 dark:divide-gray-700">
+        <ul class="divide-y divide-gray-200 dark:divide-border">
           <li
             v-for="(column, key) in props.columns"
             v-show="column.can_be_hidden"
@@ -45,8 +45,8 @@
               type="button"
               class="ml-4 relative inline-flex shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-hidden focus:ring-2 focus:ring-offset-2 focus:ring-light-blue-500"
               :class="{
-                'bg-green-500': !column.hidden,
-                'bg-gray-200 dark:bg-gray-800': column.hidden,
+                'bg-primary': !column.hidden,
+                'bg-foreground dark:bg-muted': column.hidden,
               }"
               :aria-pressed="!column.hidden"
               :aria-labelledby="`toggle-column-${column.key}`"
@@ -61,7 +61,7 @@
                   'translate-x-5': !column.hidden,
                   'translate-x-0': column.hidden,
                 }"
-                class="inline-block h-5 w-5 rounded-full bg-white dark:bg-gray-900 shadow-sm ring-0 transition ease-in-out duration-200"
+                class="inline-block h-5 w-5 rounded-full bg-background dark:bg-background shadow-sm ring-0 transition ease-in-out duration-200"
               />
             </button>
           </li>

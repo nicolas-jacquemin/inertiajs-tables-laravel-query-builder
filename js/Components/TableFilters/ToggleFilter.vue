@@ -64,16 +64,16 @@ const fallbackTheme = {
   toggle: {
     base: "w-11 h-6 rounded-full after:border after:rounded-full after:h-5 after:w-5",
     color: {
-      primary: "after:bg-white after:border-white peer-checked:bg-indigo-500 bg-red-500",
-      dootix: "after:bg-white after:border-white peer-checked:bg-linear-to-r peer-checked:from-cyan-500 peer-checked:to-blue-600 bg-red-500",
-      disabled: "after:bg-white after:border-white bg-gray-200",
+      primary: "after:bg-background after:border-white peer-checked:bg-indigo-500 bg-red-500",
+      dootix: "after:bg-background after:border-white peer-checked:bg-linear-to-r peer-checked:from-cyan-500 peer-checked:to-blue-600 bg-red-500",
+      disabled: "after:bg-background after:border-white bg-foreground",
     },
   },
   reset_button: {
     base: "rounded-md focus:outline-hidden focus:ring-2 focus:ring-offset-2",
     color: {
-      primary: "text-gray-400 hover:text-gray-500 focus:ring-indigo-500",
-      dootix: "text-gray-400 hover:text-gray-500 focus:ring-cyan-500",
+      primary: "text-muted-foreground hover:text-muted-foreground focus:ring-indigo-500",
+      dootix: "text-muted-foreground hover:text-muted-foreground focus:ring-cyan-500",
     },
   },
 }

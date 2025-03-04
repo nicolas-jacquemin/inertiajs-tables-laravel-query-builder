@@ -1,7 +1,7 @@
 <template>
   <nav
     v-if="hasPagination"
-    class="bg-white dark:bg-gray-900 px-4 py-3 flex items-center justify-between border-t border-gray-200 dark:border-gray-700 sm:px-6"
+    class="bg-background dark:bg-background px-4 py-3 flex items-center justify-between border-t border-gray-200 dark:border-border sm:px-6"
   >
     <p v-if="!hasData || pagination.total < 1">
       {{ translations.no_results_found }}
@@ -16,17 +16,17 @@
       <component
         :is="previousPageUrl ? 'a' : 'div'"
         :class="{
-          'cursor-not-allowed text-gray-400': !previousPageUrl,
-          'text-gray-700 hover:text-gray-500': previousPageUrl
+          'cursor-not-allowed text-muted-foreground': !previousPageUrl,
+          'text-muted-foreground hover:text-muted-foreground': previousPageUrl
         }"
         :href="previousPageUrl"
         :dusk="previousPageUrl ? 'pagination-simple-previous' : null"
-        class="relative inline-flex items-center px-4 py-2 border border-gray-300 dark:border-gray-700 text-sm font-medium rounded-md bg-white dark:bg-gray-800"
+        class="relative inline-flex items-center px-4 py-2 border border-border dark:border-border text-sm font-medium rounded-md bg-background dark:bg-muted"
         @click.prevent="onClick(previousPageUrl)"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          class="h-5 w-5 text-gray-400"
+          class="h-5 w-5 text-muted-foreground"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -50,18 +50,18 @@
       <component
         :is="nextPageUrl ? 'a' : 'div'"
         :class="{
-          'cursor-not-allowed text-gray-400 dark:text-gray-700': !nextPageUrl,
-          'text-gray-700 hover:text-gray-500 dark:text-gray-400': nextPageUrl
+          'cursor-not-allowed text-muted-foreground dark:text-muted-foreground': !nextPageUrl,
+          'text-muted-foreground hover:text-muted-foreground dark:text-muted-foreground': nextPageUrl
         }"
         :href="nextPageUrl"
         :dusk="nextPageUrl ? 'pagination-simple-next' : null"
-        class="ml-3 relative inline-flex items-center px-4 py-2 border border-gray-300 dark:border-gray-700 text-sm font-medium rounded-md bg-white dark:bg-gray-900"
+        class="ml-3 relative inline-flex items-center px-4 py-2 border border-border dark:border-border text-sm font-medium rounded-md bg-background dark:bg-background"
         @click.prevent="onClick(nextPageUrl)"
       >
         <span class="hidden sm:inline mr-2">{{ translations.next }}</span>
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          class="h-5 w-5 text-gray-400"
+          class="h-5 w-5 text-muted-foreground"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -90,7 +90,7 @@
           :color="color"
         />
 
-        <p class="hidden lg:block text-sm text-gray-700 dark:text-gray-400 grow">
+        <p class="hidden lg:block text-sm text-muted-foreground dark:text-muted-foreground grow">
           <span class="font-medium">{{ pagination.from }}</span>
           {{ translations.to }}
           <span class="font-medium">{{ pagination.to }}</span>
@@ -107,12 +107,12 @@
           <component
             :is="previousPageUrl ? 'a' : 'div'"
             :class="{
-              'cursor-not-allowed text-gray-400': !previousPageUrl,
-              'text-gray-500 hover:bg-gray-50': previousPageUrl
+              'cursor-not-allowed text-muted-foreground': !previousPageUrl,
+              'text-muted-foreground hover:bg-background': previousPageUrl
             }"
             :href="previousPageUrl"
             :dusk="previousPageUrl ? 'pagination-previous' : null"
-            class="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white dark:bg-gray-900 dark:border-gray-700 text-sm font-medium"
+            class="relative inline-flex items-center px-2 py-2 rounded-l-md border border-border bg-background dark:bg-background dark:border-border text-sm font-medium"
             @click.prevent="onClick(previousPageUrl)"
           >
             <span class="sr-only">{{ translations.previous }}</span>
@@ -142,12 +142,12 @@
                 "
                 :href="link.url"
                 :dusk="link.url ? `pagination-${link.label}` : null"
-                class="relative inline-flex items-center px-4 py-2 border border-gray-300 dark:border-gray-700 text-sm font-medium text-gray-700 dark:text-gray-200"
+                class="relative inline-flex items-center px-4 py-2 border border-border dark:border-border text-sm font-medium text-muted-foreground dark:text-gray-200"
                 :class="{
                   'cursor-not-allowed': !link.url,
-                  'hover:bg-gray-50 dark:hover:bg-gray-700': link.url,
-                  'bg-white dark:bg-gray-900': !link.active,
-                  'bg-gray-100 dark:bg-gray-800': link.active,
+                  'hover:bg-background dark:hover:bg-border': link.url,
+                  'bg-background dark:bg-background': !link.active,
+                  'bg-gray-100 dark:bg-muted': link.active,
                 }"
                 @click.prevent="onClick(link.url)"
               >
@@ -159,12 +159,12 @@
           <component
             :is="nextPageUrl ? 'a' : 'div'"
             :class="{
-              'cursor-not-allowed text-gray-400': !nextPageUrl,
-              'text-gray-500 hover:bg-gray-50': nextPageUrl
+              'cursor-not-allowed text-muted-foreground': !nextPageUrl,
+              'text-muted-foreground hover:bg-background': nextPageUrl
             }"
             :href="nextPageUrl"
             :dusk="nextPageUrl ? 'pagination-next' : null"
-            class="relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white dark:bg-gray-900 dark:border-gray-700 text-sm font-medium"
+            class="relative inline-flex items-center px-2 py-2 rounded-r-md border border-border bg-background dark:bg-background dark:border-border text-sm font-medium"
             @click.prevent="onClick(nextPageUrl)"
           >
             <span class="sr-only">{{ translations.next }}</span>

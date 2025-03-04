@@ -9,7 +9,7 @@
     <template #button>
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        class="h-5 w-5 text-gray-400"
+        class="h-5 w-5 text-muted-foreground"
 
         viewBox="0 0 20 20"
         fill="currentColor"
@@ -32,7 +32,7 @@
         v-for="(searchInput, key) in searchInputs"
         :key="key"
         :dusk="`add-search-row-${searchInput.key}`"
-        class="text-left w-full px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 hover:text-gray-900 dark:hover:bg-gray-900 hover:text-gray-300"
+        class="text-left w-full px-4 py-2 text-sm text-muted-foreground dark:text-gray-200 hover:bg-gray-100 hover:text-gray-900 dark:hover:bg-background hover:text-gray-300"
         role="menuitem"
         @click.prevent="enableSearch(searchInput.key)"
       >

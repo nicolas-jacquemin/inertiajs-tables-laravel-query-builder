@@ -18,7 +18,7 @@
         ref="tooltip"
         class="absolute z-10"
       >
-        <div class="mt-2 rounded-md shadow-lg bg-white ring-1 ring-black/5 dark:bg-gray-900 dark:divide-gray-800 dark:border dark:border-white/5">
+        <div class="mt-2 rounded-md shadow-lg bg-background ring-1 ring-black/5 dark:bg-background dark:divide-muted dark:border dark:border-white/5">
           <slot />
         </div>
       </div>
@@ -106,13 +106,13 @@ onMounted(() => {
 defineExpose({ hide });
 
 // Theme
-const commonClasses = "w-full bg-white border rounded-md shadow-xs px-4 py-2 inline-flex justify-center text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-hidden focus:ring-2 focus:ring-offset-2 border-gray-300"
+const commonClasses = "w-full bg-background border rounded-md shadow-xs px-4 py-2 inline-flex justify-center text-sm font-medium text-muted-foreground hover:bg-background focus:outline-hidden focus:ring-2 focus:ring-offset-2 border-border"
 const fallbackTheme = {
     button: {
         base: "w-full border rounded-md shadow-xs px-4 py-2 inline-flex justify-center text-sm font-medium focus:outline-hidden focus:ring-2 focus:ring-offset-2",
         color: {
-            primary: "bg-white text-gray-700 hover:bg-gray-50 border-gray-300 focus:ring-indigo-500 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-300 dark:hover:bg-gray-900",
-            dootix: "bg-white text-gray-700 hover:bg-gray-50 border-gray-300 focus:ring-cyan-500 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-300 dark:hover:bg-gray-900",
+            primary: "bg-background text-muted-foreground hover:bg-background border-border focus:ring-indigo-500 dark:bg-muted dark:border-border dark:text-gray-300 dark:hover:bg-background",
+            dootix: "bg-background text-muted-foreground hover:bg-background border-border focus:ring-cyan-500 dark:bg-muted dark:border-border dark:text-gray-300 dark:hover:bg-background",
         },
     },
 }

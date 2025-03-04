@@ -11,7 +11,7 @@
     <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        class="h-5 w-5 text-gray-400"
+        class="h-5 w-5 text-muted-foreground"
 
         viewBox="0 0 20 20"
         fill="currentColor"
@@ -65,10 +65,9 @@ const props = defineProps({
 // Theme
 const fallbackTheme = {
   input: {
-    base: "block w-full pl-9 text-sm rounded-md shadow-xs dark:bg-gray-800",
+    base: "block w-full pl-9 text-sm rounded-md shadow-xs dark:bg-muted h-full",
     color: {
-      primary: "focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 dark:border-gray-700 dark:text-gray-300",
-      dootix: "focus:ring-cyan-500 focus:border-blue-500 border-gray-300 dark:border-gray-700 dark:text-gray-300",
+      primary: "focus:ring-indigo-500 focus:border-indigo-500 border border-border dark:border-border dark:text-gray-300",
     },
   },
 }
@@ -80,4 +79,3 @@ const getTheme = (item) => {
   )
 }
 </script>
-

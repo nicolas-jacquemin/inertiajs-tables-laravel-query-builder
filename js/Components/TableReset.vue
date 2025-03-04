@@ -9,7 +9,7 @@
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      class="h-5 w-5 mr-2 text-gray-400"
+      class="h-5 w-5 mr-2 text-muted-foreground"
       viewBox="0 0 20 20"
       fill="currentColor"
     >
@@ -55,8 +55,8 @@ const fallbackTheme = {
     button: {
         base: "w-full border rounded-md shadow-xs px-4 py-2 inline-flex justify-center text-sm font-medium focus:outline-hidden focus:ring-2 focus:ring-offset-2",
         color: {
-            primary: "bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 border-gray-300 dark:border-gray-700 focus:ring-indigo-500",
-            dootix: "bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 border-gray-300 dark:border-gray-700 focus:ring-cyan-500",
+            primary: "bg-background dark:bg-background text-muted-foreground dark:text-gray-300 hover:bg-background dark:hover:bg-muted border-border dark:border-border focus:ring-indigo-500",
+            dootix: "bg-background dark:bg-background text-muted-foreground dark:text-gray-300 hover:bg-background dark:hover:bg-muted border-border dark:border-border focus:ring-cyan-500",
         },
     },
 }

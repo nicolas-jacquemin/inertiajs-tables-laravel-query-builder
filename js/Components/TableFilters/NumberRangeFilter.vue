@@ -236,8 +236,8 @@ export default {
       main_bar: {
         base: "h-2 rounded-full",
         color: {
-          primary: "bg-gray-200",
-          dootix: "bg-gray-200",
+          primary: "bg-foreground",
+          dootix: "bg-foreground",
         },
       },
       selected_bar: {
@@ -250,8 +250,8 @@ export default {
       button: {
         base: "h-4 w-4 rounded-full shadow-sm border",
         color: {
-          primary: "bg-white border-gray-300",
-          dootix: "bg-white border-gray-300",
+          primary: "bg-background border-border",
+          dootix: "bg-background border-border",
         },
       },
       popover: {
@@ -269,8 +269,8 @@ export default {
       },
       text: {
         color: {
-          primary: "text-gray-700",
-          dootix: "text-gray-700",
+          primary: "text-muted-foreground",
+          dootix: "text-muted-foreground",
         },
       },
     }

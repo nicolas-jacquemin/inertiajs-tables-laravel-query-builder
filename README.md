@@ -563,7 +563,7 @@ const themeVariables = {
             select: {
                 base: "block min-w-max shadow-sm text-sm rounded-md",
                 color: {
-                    primary: "border-gray-300 focus:ring-yellow-500 focus:border-yellow-500",
+                    primary: "border-border focus:ring-yellow-500 focus:border-yellow-500",
                 },
             },
         },
@@ -580,7 +580,7 @@ const themeVariables = {
             select: {
                 base: "block min-w-max shadow-sm text-sm rounded-md",
                 color: {
-                    red_style: 'border-gray-300 focus:ring-red-500 focus:border-red-500',
+                    red_style: 'border-border focus:ring-red-500 focus:border-red-500',
                 },
             },
         },
@@ -603,8 +603,8 @@ const themeVariables = {
             button: {
                 base: "w-full border rounded-md shadow-sm px-4 py-2 inline-flex justify-center text-sm font-medium focus:outline-none focus:ring-2 focus:ring-offset-2",
                 color: {
-                    primary: "bg-white text-gray-700 hover:bg-gray-50 border-gray-300 focus:ring-indigo-500",
-                    dootix: "bg-white text-gray-700 hover:bg-gray-50 border-gray-300 focus:ring-cyan-500",
+                    primary: "bg-white text-gray-700 hover:bg-background border-border focus:ring-indigo-500",
+                    dootix: "bg-white text-gray-700 hover:bg-background border-border focus:ring-cyan-500",
                 },
             },
         },
@@ -612,8 +612,8 @@ const themeVariables = {
             select: {
                 base: "block min-w-max shadow-sm text-sm rounded-md",
                 color: {
-                    primary: "border-gray-300 focus:ring-indigo-500 focus:border-indigo-500",
-                    dootix: "border-gray-300 focus:ring-cyan-500 focus:border-blue-500",
+                    primary: "border-border focus:ring-indigo-500 focus:border-indigo-500",
+                    dootix: "border-border focus:ring-cyan-500 focus:border-blue-500",
                 },
             },
         },
@@ -622,8 +622,8 @@ const themeVariables = {
                 select: {
                     base: "block w-full shadow-sm text-sm rounded-md",
                     color: {
-                        primary: "border-gray-300 focus:ring-indigo-500 focus:border-indigo-500",
-                        dootix: "border-gray-300 focus:ring-cyan-500 focus:border-blue-500",
+                        primary: "border-border focus:ring-indigo-500 focus:border-indigo-500",
+                        dootix: "border-border focus:ring-cyan-500 focus:border-blue-500",
                     },
                 },
             },
@@ -633,14 +633,14 @@ const themeVariables = {
                     color: {
                         primary: "after:bg-white after:border-white peer-checked:bg-indigo-500 bg-red-500",
                         dootix: "after:bg-white after:border-white peer-checked:bg-gradient-to-r peer-checked:from-cyan-500 peer-checked:to-blue-600 bg-red-500",
-                        disabled: "after:bg-white after:border-white bg-gray-200",
+                        disabled: "after:bg-white after:border-white bg-foreground",
                     }
                 },
                 reset_button: {
                     base: "rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2",
                     color: {
-                        primary: "text-gray-400 hover:text-gray-500 focus:ring-indigo-500",
-                        dootix: "text-gray-400 hover:text-gray-500 focus:ring-cyan-500",
+                        primary: "text-muted-foreground hover:text-muted-foreground focus:ring-indigo-500",
+                        dootix: "text-muted-foreground hover:text-muted-foreground focus:ring-cyan-500",
                     },
                 },
             },
@@ -648,8 +648,8 @@ const themeVariables = {
                 main_bar: {
                     base: "h-2 rounded-full",
                     color: {
-                        primary: "bg-gray-200",
-                        dootix: "bg-gray-200",
+                        primary: "bg-foreground",
+                        dootix: "bg-foreground",
                     },
                 },
                 selected_bar: {
@@ -662,8 +662,8 @@ const themeVariables = {
                 button: {
                     base: "h-4 w-4 rounded-full shadow border",
                     color: {
-                        primary: "bg-white border-gray-300",
-                        dootix: "bg-white border-gray-300",
+                        primary: "bg-white border-border",
+                        dootix: "bg-white border-border",
                     },
                 },
                 popover: {
@@ -691,8 +691,8 @@ const themeVariables = {
             input: {
                 base: "block w-full pl-9 text-sm rounded-md shadow-sm",
                 color: {
-                    primary: "focus:ring-indigo-500 focus:border-indigo-500 border-gray-300",
-                    dootix: "focus:ring-cyan-500 focus:border-blue-500 border-gray-300",
+                    primary: "focus:ring-indigo-500 focus:border-indigo-500 border-border",
+                    dootix: "focus:ring-cyan-500 focus:border-blue-500 border-border",
                 },
             },
         },
@@ -700,8 +700,8 @@ const themeVariables = {
             button: {
                 base: "w-full border rounded-md shadow-sm px-4 py-2 inline-flex justify-center text-sm font-medium focus:outline-none focus:ring-2 focus:ring-offset-2",
                 color: {
-                    primary: "bg-white text-gray-700 hover:bg-gray-50 border-gray-300 focus:ring-indigo-500",
-                    dootix: "bg-white text-gray-700 hover:bg-gray-50 border-gray-300 focus:ring-cyan-500",
+                    primary: "bg-white text-gray-700 hover:bg-background border-border focus:ring-indigo-500",
+                    dootix: "bg-white text-gray-700 hover:bg-background border-border focus:ring-cyan-500",
                 },
             },
         },
@@ -709,15 +709,15 @@ const themeVariables = {
             input: {
                 base: "flex-1 min-w-0 block w-full px-3 py-2 rounded-none rounded-r-md text-sm",
                 color: {
-                    primary: "border-gray-300 focus:ring-indigo-500 focus:border-indigo-500",
-                    dootix: "border-gray-300 focus:ring-cyan-500 focus:border-blue-500",
+                    primary: "border-border focus:ring-indigo-500 focus:border-indigo-500",
+                    dootix: "border-border focus:ring-cyan-500 focus:border-blue-500",
                 },
             },
             remove_button: {
                 base: "rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2",
                 color: {
-                    primary: "text-gray-400 hover:text-gray-500 focus:ring-indigo-500",
-                    dootix: "text-gray-400 hover:text-gray-500 focus:ring-cyan-500",
+                    primary: "text-muted-foreground hover:text-muted-foreground focus:ring-indigo-500",
+                    dootix: "text-muted-foreground hover:text-muted-foreground focus:ring-cyan-500",
                 },
             },
         },

@@ -137,8 +137,8 @@
       >
         <TableWrapper :class="{ 'mt-3': !hasOnlyData }">
           <slot name="table">
-            <table class="min-w-full divide-y divide-gray-300 dark:divide-gray-700">
-              <thead class="bg-gray-50 dark:bg-gray-900">
+            <table class="min-w-full divide-y divide-gray-300 dark:divide-border">
+              <thead class="bg-background dark:bg-background">
                 <slot
                   name="head"
                   :show="show"
@@ -163,7 +163,7 @@
                   </tr>
                 </slot>
               </thead>
-              <tbody class="divide-y divide-gray-200 dark:divide-gray-700 bg-white dark:bg-gray-900">
+              <tbody class="divide-y divide-gray-200 dark:divide-border bg-background dark:bg-background">
                 <slot
                   name="body"
                   :show="show"
@@ -173,9 +173,9 @@
                     :key="`table-${name}-row-${key}`"
                     class=""
                     :class="{
-                      'bg-gray-50': striped && key % 2,
-                      'hover:bg-gray-100 dark:hover:bg-gray-800': striped,
-                      'hover:bg-gray-50 dark:hover:bg-gray-800': !striped
+                      'bg-background': striped && key % 2,
+                      'hover:bg-gray-100 dark:hover:bg-muted': striped,
+                      'hover:bg-background dark:hover:bg-muted': !striped
                     }"
                     @click="rowClicked($event, item, key)"
                   >
@@ -183,7 +183,7 @@
                       v-for="column in queryBuilderProps.columns"
                       v-show="show(column.key)"
                       :key="`table-${name}-row-${key}-column-${column.key}`"
-                      class="whitespace-nowrap px-3 py-4 text-sm text-gray-500"
+                      class="whitespace-nowrap px-3 py-4 text-sm text-muted-foreground"
                     >
                       <slot
                         :name="`cell(${column.key})`"

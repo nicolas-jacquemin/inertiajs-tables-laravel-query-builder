@@ -8,11 +8,11 @@
     <div class="flex rounded-md shadow-xs relative mt-3">
       <label
         :for="searchInput.key"
-        class="inline-flex items-center px-4 rounded-l-md border border-r-0 border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 text-gray-500 text-sm"
+        class="inline-flex items-center px-4 rounded-l-md border border-r-0 border-border dark:border-border bg-background dark:bg-background text-muted-foreground text-sm"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          class="h-5 w-5 mr-2 text-gray-400"
+          class="h-5 w-5 mr-2 text-muted-foreground"
 
           viewBox="0 0 20 20"
           fill="currentColor"
@@ -133,15 +133,15 @@ const fallbackTheme = {
     input: {
         base: "flex-1 min-w-0 block w-full px-3 py-2 rounded-none rounded-r-md text-sm",
         color: {
-            primary: "border-gray-300 dark:border-gray-700 focus:ring-indigo-500 focus:border-indigo-500",
-            dootix: "border-gray-300 dark:border-gray-700 focus:ring-cyan-500 focus:border-blue-500",
+            primary: "bg-background border border-border dark:border-border focus:ring-indigo-500 focus:border-indigo-500",
+            dootix: "bg-background border border-border dark:border-border focus:ring-cyan-500 focus:border-blue-500",
         },
     },
     remove_button: {
         base: "rounded-md focus:outline-hidden focus:ring-2 focus:ring-offset-2",
         color: {
-            primary: "text-gray-400 hover:text-gray-500 focus:ring-indigo-500",
-            dootix: "text-gray-400 hover:text-gray-500 focus:ring-cyan-500",
+            primary: "text-muted-foreground hover:text-muted-foreground focus:ring-indigo-500",
+            dootix: "text-muted-foreground hover:text-muted-foreground focus:ring-cyan-500",
         },
     },
 }

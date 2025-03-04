@@ -7,7 +7,7 @@
     <template #button>
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        class="h-5 w-5 text-gray-400"
+        class="h-5 w-5 text-muted-foreground"
         viewBox="0 0 20 20"
         fill="currentColor"
       >
@@ -30,7 +30,7 @@
         v-for="(filter, key) in filters"
         :key="key"
       >
-        <h3 class="text-xs uppercase tracking-wide bg-gray-100 p-3 dark:bg-gray-900 dark:divide-gray-800 dark:border dark:border-white/5 dark:text-gray-200">
+        <h3 class="text-xs uppercase tracking-wide bg-gray-100 p-3 dark:bg-background dark:divide-muted dark:border dark:border-white/5 dark:text-gray-200">
           {{ filter.label }}
         </h3>
         <div class="p-2">
@@ -69,7 +69,7 @@
           </div>
           <div v-if="filter.type === 'custom'">
               <slot :name="`custom_filter(${filter.key})`" :filter="filter" :on-filter-change="onFilterChange" :color="color">
-                  <p class="text-gray-500">No custom filter provided. Slot name: {{ `custom_filter(${filter.key})` }}</p>
+                  <p class="text-muted-foreground">No custom filter provided. Slot name: {{ `custom_filter(${filter.key})` }}</p>
               </slot>
           </div>
         </div>
@@ -152,8 +152,8 @@ const fallbackTheme = {
     select: {
         base: "block w-full shadow-xs text-sm rounded-md",
         color: {
-            primary: "border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 dark:bg-gray-800 dark:divide-gray-800 dark:border dark:border-white/5 dark:text-gray-200",
-            dootix: "border-gray-300 focus:ring-cyan-500 focus:border-blue-500 dark:bg-gray-800 dark:divide-gray-800 dark:border dark:border-white/5 dark:text-gray-200",
+            primary: "border-border focus:ring-indigo-500 focus:border-indigo-500 dark:bg-muted dark:divide-muted dark:border dark:border-white/5 dark:text-gray-200",
+            dootix: "border-border focus:ring-cyan-500 focus:border-blue-500 dark:bg-muted dark:divide-muted dark:border dark:border-white/5 dark:text-gray-200",
         },
     },
 }
