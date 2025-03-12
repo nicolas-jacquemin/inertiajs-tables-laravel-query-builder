@@ -112,6 +112,7 @@
             <TableReset :on-click="resetQuery" :color="color" />
           </div>
         </slot>
+        <slot name="header-append" />
       </div>
 
       <slot
